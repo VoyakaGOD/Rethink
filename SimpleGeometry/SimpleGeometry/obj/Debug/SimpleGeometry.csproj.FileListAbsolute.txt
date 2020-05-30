@@ -1,0 +1,6 @@
+C:\Users\человек\source\repos\SimpleGeometry\SimpleGeometry\bin\Debug\SimpleGeometry.dll
+C:\Users\человек\source\repos\SimpleGeometry\SimpleGeometry\bin\Debug\SimpleGeometry.pdb
+C:\Users\человек\source\repos\SimpleGeometry\SimpleGeometry\obj\Debug\SimpleGeometry.csprojAssemblyReference.cache
+C:\Users\человек\source\repos\SimpleGeometry\SimpleGeometry\obj\Debug\SimpleGeometry.csproj.CoreCompileInputs.cache
+C:\Users\человек\source\repos\SimpleGeometry\SimpleGeometry\obj\Debug\SimpleGeometry.dll
+C:\Users\человек\source\repos\SimpleGeometry\SimpleGeometry\obj\Debug\SimpleGeometry.pdb
