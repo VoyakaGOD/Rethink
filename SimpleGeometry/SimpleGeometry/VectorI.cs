@@ -7,25 +7,16 @@ namespace SimpleGeometry
 		public int X;
 		public int Y;
 
+		public int SqrLength => X * X + Y * Y;
+
+		public float Length => (float)Math.Sqrt(X * X + Y * Y);
+
+		public VectorI Normalized => this * (1 / Length);
+
 		public VectorI(int x, int y)
 		{
 			X = x;
 			Y = y;
-		}
-
-		public int SqrLength()
-		{
-			return X * X + Y * Y;
-		}
-
-		public float Length()
-		{
-			return (float)Math.Sqrt(X * X + Y * Y);
-		}
-
-		public VectorI Normalized()
-		{
-			return this * (1 / Length());
 		}
 
 		public static VectorI operator -(VectorI v) => new VectorI(-v.X, -v.Y);

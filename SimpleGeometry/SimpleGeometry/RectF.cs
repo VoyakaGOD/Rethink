@@ -27,6 +27,8 @@ namespace SimpleGeometry
 
 		public float MinY => Math.Min(Top, Top + Height);
 
+		public RectF Normalized => new RectF(Min, Max - Min);
+
 		public RectF(float left, float top, float width, float height)
 		{
 			Left = left;
@@ -41,9 +43,9 @@ namespace SimpleGeometry
 
 		public bool Contains(VectorF point) => Contains(point.X, point.Y);
 
-		public bool IsIntersects(RectF other) => (MaxX >= other.MinX) && (other.MaxX >= MinX) && (MaxY >= other.MinY) && (other.MaxY >= MinY);
+		public bool Intersects(RectF other) => (MaxX >= other.MinX) && (other.MaxX >= MinX) && (MaxY >= other.MinY) && (other.MaxY >= MinY);
 
-		public bool IsIntersects(RectF rect, out RectF overlap)
+		public bool Intersects(RectF rect, out RectF overlap)
 		{
 			float maxX = Math.Min(MaxX, rect.MaxX);
 			float minX = Math.Max(MinX, rect.MinX);

@@ -27,6 +27,8 @@ namespace SimpleGeometry
 
 		public int MinY => Math.Min(Top, Top + Height);
 
+		public RectI Normalized => new RectI(Min, Max - Min);
+
 		public RectI(int left, int top, int width, int height)
 		{
 			Left = left;
@@ -41,9 +43,9 @@ namespace SimpleGeometry
 
 		public bool Contains(VectorI point) => Contains(point.X, point.Y);
 
-		public bool IsIntersects(RectI other) => (MaxX >= other.MinX) && (other.MaxX >= MinX) && (MaxY >= other.MinY) && (other.MaxY >= MinY);
+		public bool Intersects(RectI other) => (MaxX >= other.MinX) && (other.MaxX >= MinX) && (MaxY >= other.MinY) && (other.MaxY >= MinY);
 
-		public bool IsIntersects(RectI rect, out RectI overlap)
+		public bool Intersects(RectI rect, out RectI overlap)
 		{
 			int maxX = Math.Min(MaxX, rect.MaxX);
 			int minX = Math.Max(MinX, rect.MinX);
